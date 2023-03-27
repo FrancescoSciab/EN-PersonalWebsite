@@ -26,7 +26,7 @@
 }
 
 //#About, #Skills, #Contacts buttons
-.buttons-container{
+.dropdown{
         padding: 0;
         margin: 0;
 
@@ -78,9 +78,9 @@
         }
 }
 
-.buttons-container {
-        
+.dropdown {
         flex-direction: column;
+                
 
         a{
             padding: 10px 20px;
@@ -88,6 +88,12 @@
             transition: ease-out 0.5s;
             transition-delay: 0.3s;
             width: 100px;
+            -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+        }
 
             &:link,
             &:visited{
@@ -112,5 +118,4 @@ button{
         @extend %desktop-buttons;
         width: 461px;
         border: 0;
-        }
 }

@@ -39,20 +39,33 @@ strong{
 .navbar{
     position: fixed;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
     
 
     background-color: $main-color;
     border-bottom: 3px solid $secondary-color;
     box-shadow: rgba(0, 0, 0, 0.40) 1.95px 1.95px 2.6px;
-
-    h1{
-        margin-left: 15px;
-        font-family: $font-stack;
-        font-size: 20px;
-        font-weight: 500;
+    .top-navbar{
         display: flex;
-        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        
+        i{
+            padding: 20px;
+        }
+
+        h1{
+            margin-left: 15px;
+            font-family: $font-stack;
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            position: relative;
+            }
+        }
     }
+    
 
     nav{
         position: relative;
@@ -61,7 +74,7 @@ strong{
         
     }
     
-}
+
 .navbar:hover nav{
     display: block;
 }
@@ -90,7 +103,7 @@ section {
     }
 }
 
-.first-section {
+#first-section {
     padding-left: 0;
 
     header{
@@ -371,10 +384,12 @@ form{
         top: 0;
     }
 
-    .first-section h1{
-        font-size: 90px;
-        font-weight: 550;
-        padding: 60px;
+    #first-section {
+        h1{
+            font-size: 90px;
+            font-weight: 550;
+            padding: 60px;
+        }
     }
 
     #About,
