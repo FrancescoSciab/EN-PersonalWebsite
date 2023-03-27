@@ -9,8 +9,11 @@
 
 //mobile buttons style
 %mobile-buttons{
-        
+        padding: 15px;
+
+        text-decoration: none;
         color: $secondary-color;
+        border-bottom: 1px solid $secondary-color;
 
         transition: ease-out 0.5s;
         transition-delay: 0.3s;
@@ -30,19 +33,16 @@
         padding: 0;
         margin: 0;
 
-        h6{
-                margin: 0;
-                border-bottom: 1px solid $secondary-color;
-                a{
-                        display: block;
-                        @extend %mobile-buttons;
-                        padding: 15px;
-                        
-                        text-decoration: none;
-                        
-                }
-                    
-        } 
+        li{
+                list-style-type: none;
+                h6{
+                        margin: 0;
+                        a{
+                                display: block;
+                                @extend %mobile-buttons;
+                        }          
+                } 
+        }
 }
 
 //submit button
@@ -62,6 +62,11 @@
 %desktop-buttons{
                 padding: 10px 20px;
                 margin: 0;
+                width: 100px;
+                border: 1px solid $secondary-color;
+                
+                margin-top: 15px;
+
                 transition: ease-out 0.5s;
                 transition-delay: 0.3s;
                 &:link,
@@ -74,48 +79,26 @@
                 background-color: $secondary-color;
                 color: $main-color;
                 border-color: $main-color;
+
                 transition: ease-out 0.5s;
         }
 }
 
 .dropdown {
-        flex-direction: column;
-                
-
         a{
-            padding: 10px 20px;
-            margin: 0;
-            transition: ease-out 0.5s;
-            transition-delay: 0.3s;
-            width: 100px;
-            -webkit-transition: all .25s ease;
-       -moz-transition: all .25s ease;
-        -ms-transition: all .25s ease;
-         -o-transition: all .25s ease;
-            transition: all .25s ease;
-        }
-
-            &:link,
-            &:visited{
-                padding: 10px 20px;
-            }
-
-            &:hover,
-            &:visited:hover {
-                background-color: $secondary-color;
-                color: $main-color;
-                border-color: $main-color;
-                width: 130px;
-                transition: ease-out 0.5s;
-            }
-        }
-
-
-        
+                @extend %desktop-buttons;
+                text-align: center;
+                border-bottom: 2px solid $secondary-color !important;
+                &:hover{
+                        border-bottom: 1px solid !important;
+                }
+        }    
 }
-
-button{
+.submit-button{
         @extend %desktop-buttons;
         width: 461px;
         border: 0;
+}        
 }
+
+
